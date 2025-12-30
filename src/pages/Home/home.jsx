@@ -13,7 +13,7 @@ const Home = () => {
       <div className="overlay"></div>
 
       <div className="content">
-        <h1 className="title">সমিতি পালপাড়ার</h1>
+        <h1 className="title">পাল শক্তি সমবায় সমিতি</h1>
         <p className="subtitle">
           ঐক্য • উন্নয়ন • সহযোগিতা
         </p>
