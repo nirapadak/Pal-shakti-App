@@ -1,0 +1,81 @@
+.users-container {
+  padding: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.users-container h2 {
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+/* Table wrapper for mobile */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+thead {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+th,
+td {
+  padding: 12px 14px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+th {
+  color: #ffcc80;
+  font-weight: 600;
+}
+
+tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+tr:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Role badge */
+.role {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.role.admin {
+  background: rgba(255, 87, 34, 0.3);
+  color: #ff5722;
+}
+
+.role.user {
+  background: rgba(76, 175, 80, 0.3);
+  color: #4caf50;
+}
+
+/* Status */
+.status {
+  padding: 20px;
+}
+
+.status.error {
+  color: red;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  th,
+  td {
+    font-size: 0.85rem;
+  }
+}

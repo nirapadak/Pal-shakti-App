@@ -1,24 +1,59 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import About from "./pages/about";
 import './App.css';
+import Home from './pages/Home/home';
+import Register from "./pages/Register";
+
+import PrivateRoute from "./routes/PrivateRoute";
+import Dashboard from "./pages/Dashboard";
+import AdminRoute from "./routes/AdminRoute";
+import AdminDashboard from "./pages/AdminDashboard";
+import AllUsers from "./pages/AdminRoutes/AllUsers";
+import AllMembers from "./pages/AdminRoutes/AllMembers";
+import AdminNav from "./pages/AdminRoutes/AdminNav";
+import Login from "./pages/Login";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+
+      <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        <Route path="/register" element={<Register />} />
+        
+
+
+        <Route
+          path="/dashboard"
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        />
+
+        {/* ADMIN */}
+        <Route
+          path="/admin"
+          element={
+            <AdminRoute>
+              <AdminDashboard />
+
+            </AdminRoute>
+          }
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Route index element={<AdminNav />} />
+          <Route path="users" element={<AllUsers />} />
+          <Route path="members" element={<AllMembers />} />
+        </Route>
+
+
+
+        </Routes>
+      </BrowserRouter>
+  
   );
 }
 

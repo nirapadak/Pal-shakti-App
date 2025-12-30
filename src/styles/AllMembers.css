@@ -1,0 +1,121 @@
+/* Container */
+.users-container {
+  padding: 20px;
+  background: #f8f9fc;
+  min-height: 100vh;
+}
+
+.users-container h2 {
+  margin-bottom: 16px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Status text */
+.status {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 18px;
+}
+
+.status.error {
+  color: red;
+}
+
+/* Table wrapper for responsiveness */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+/* Header */
+thead {
+  background: linear-gradient(135deg, #ff8c00, #ffb347);
+  color: #fff;
+}
+
+th,
+td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Sticky header */
+thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* Row hover */
+tbody tr:hover {
+  background-color: #f5f7ff;
+}
+
+/* Status badge */
+td:nth-child(7) {
+  font-weight: bold;
+}
+
+td:nth-child(7)::before {
+  content: "● ";
+  font-size: 12px;
+  color: green;
+}
+
+/* Gender styling */
+td:nth-child(8) {
+  text-transform: capitalize;
+}
+
+/* Mobile responsive card style */
+@media (max-width: 768px) {
+  table {
+    min-width: unset;
+    border: 0;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    display: block;
+    margin-bottom: 14px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    padding: 10px;
+  }
+
+  tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+  }
+
+  tbody td:last-child {
+    border-bottom: none;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #555;
+  }
+}
