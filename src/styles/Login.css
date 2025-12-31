@@ -1,31 +1,57 @@
 .login-container {
   min-height: 100vh;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url("../assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #ff9800, #ff5722);
-  padding: 20px;
+  justify-content: center;
 }
 
+
+/* Card */
 .login-card {
-  background: #fff;
   width: 100%;
-  max-width: 400px;
+  max-width: 380px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  color: white;
+  animation: fadeUp 0.7s ease;
+}
+
+
+.login-card {
+  width: 100%;
+  max-width: 380px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 16px;
+  color: white;
+  animation: fadeUp 0.7s ease;
+}
+
+.login-title{
+  color: white;
+  text-align: center;
 }
 
 .login-card h2 {
   text-align: center;
   margin-bottom: 5px;
-  color: #333;
+  
 }
 
 .login-card p {
   text-align: center;
   margin-bottom: 20px;
-  color: #777;
+  color: #ffffff;
   font-size: 14px;
 }
 
@@ -37,7 +63,7 @@
   display: block;
   margin-bottom: 6px;
   font-weight: 500;
-  color: #333;
+  color: #ffffff;
 }
 
 .form-group input {
@@ -56,14 +82,12 @@
 .login-btn {
   width: 100%;
   padding: 12px;
-  background: #ff9800;
+  border-radius: 25px;
   border: none;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 8px;
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  color: white;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: 0.3s;
 }
 
 .login-btn:hover {
@@ -85,5 +109,16 @@
 @media (max-width: 480px) {
   .login-card {
     padding: 20px;
+  }
+}
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

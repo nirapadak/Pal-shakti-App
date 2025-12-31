@@ -55,7 +55,7 @@ const Login = () => {
   return (
     <div className="login-container">
       <div className="login-card">
-        <h2>Welcome Back 👋</h2>
+        <h2 className="login-title">আমাদের সাথে থাকার জন্য ধ্যনবাদ 👋</h2>
         <p>Please login to your account</p>
 
         {error && <div className="error-msg">{error}</div>}

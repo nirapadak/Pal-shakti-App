@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { registerUser } from "../services/authService";
 import "../styles/Register.css";
 
@@ -76,7 +76,7 @@ const Register = () => {
     <div className="register-container">
       <div className="register-card">
         <h2>রেজিস্ট্রেশন</h2>
-        <p className="subtitle">সমিতি পালপাড়ার সদস্য হোন</p>
+        <p className="subtitle">পাল শক্তি সমবায় সমিতির সদস্য হোন</p>
 
         <form onSubmit={handleSubmit}>
           <input
@@ -107,8 +107,15 @@ const Register = () => {
           </button>
         </form>
 
+        <div className="login-footer">
+          <p>
+            I have an account?{" "}
+            <Link to="/login">Login</Link>
+          </p>
+        </div>
         {error && <p className="error-msg">{error}</p>}
       </div>
+  
     </div>
   );
 };

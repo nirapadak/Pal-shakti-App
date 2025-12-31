@@ -12,6 +12,8 @@ import AllUsers from "./pages/AdminRoutes/AllUsers";
 import AllMembers from "./pages/AdminRoutes/AllMembers";
 import AdminNav from "./pages/AdminRoutes/AdminNav";
 import Login from "./pages/Login";
+import Book from "./pages/UserRoutes/Book";
+import UserTopNavbar from "./pages/UserRoutes/UserTopNavbar";
 
 function App() {
   return (
@@ -32,7 +34,10 @@ function App() {
               <Dashboard />
             </PrivateRoute>
           }
-        />
+        >
+          {/* <Route index element={<UserTopNavbar />} /> */}
+          <Route path="book" element={<Book />} />
+        </Route>
 
         {/* ADMIN */}
         <Route
